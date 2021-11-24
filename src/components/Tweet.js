@@ -1,19 +1,19 @@
-function Tweet(props) {
+const Tweet = ({ tweet }) => {
   return (
     <div className='tweet'>
-      <img src={props.image} className='profile' alt='profile' />
+      <img src={tweet.user.image} className='profile' alt='profile' />
 
       <div className='body'>
         <div className='top'>
           <span className='user'>
-            <span className='name'>{props.name}</span>
-            <span className='handle'>@{props.handle}</span>
+            <span className='name'>{tweet.user.name}</span>
+            <span className='handle'>@{tweet.user.handle}</span>
           </span>
 
-          <span className='timestamp'>{props.timestamp}</span>
+          <span className='timestamp'>{tweet.timestamp}</span>
         </div>
 
-        <p className='message'>{props.message}</p>
+        <p className='message'>{tweet.message}</p>
 
         <div className='actions'>
           {/* Font Awesome icons */}
@@ -27,6 +27,6 @@ function Tweet(props) {
       <i class='fas fa-ellipsis-h'></i>
     </div>
   );
-}
+};
 
 export default Tweet;
