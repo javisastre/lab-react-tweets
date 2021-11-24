@@ -10,8 +10,8 @@ const Tweet = ({ tweet }) => {
       <ProfileImage img={tweet.user.image} />
       <div className='body'>
         <div className='top'>
-          <User user={tweet.user} />
-          <Timestamp timestamp={tweet.timestamp} />
+          <User userData={tweet.user} />
+          <Timestamp time={tweet.timestamp} />
         </div>
         <Message message={tweet.message} />
         <Actions />
